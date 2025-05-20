@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+## 프론트엔드 폴더 구조 설명
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 프로젝트 폴더 구조
 
-## Available Scripts
+my-react-app/
+├── public/ # 정적 파일 (HTML, favicon 등)
+│ └── index.html
+│
+├── src/ # 애플리케이션 소스 폴더
+│ ├── assets/ # 이미지 및 리소스
+│ │ └── images/ # 앱에서 사용되는 캐릭터, 배경, 아이콘 이미지
+│ │ ├── image-50.png
+│ │ ├── login-2.png
+│ │ └── chevron-left0.svg
+│ │
+│ ├── components/ # 재사용 가능한 UI 컴포넌트
+│ │ └── DiaryCard.js # (예정) 일기 카드 컴포넌트
+│ │
+│ ├── pages/ # 주요 화면(페이지) 컴포넌트 (그 외 .css 파일도 있음)
+│ │ ├── Login.js # 로그인 페이지
+│ │ ├── Signup.js # 회원가입 페이지
+│ │ ├── LoginIntro.js # 인트로 화면 (앱 시작 화면)
+│ │ ├── Record.js # 일기 작성/조회 화면
+│ │ └── 그 외 .css # 각 .js에 해당하는 .css 파일들
+│ │
+│ ├── api/ # 서버 API 통신 로직 (예정)
+│ │
+│ ├── App.js # 전체 라우팅 정의 및 앱 구성
+│ ├── index.js # React 앱 진입점
+│ ├── index.css # 전역 스타일 (폰트, 네비게이션, 초기화 등)
+│ ├── Login.css # 로그인 화면 스타일
+│ ├── Signup.css # 회원가입 화면 스타일
+│ └── var.css # 전역 색상/폰트 등 CSS 변수 정의
+│
+├── package.json # 프로젝트 메타 정보 및 의존성 관리
+├── package-lock.json # 의존성 잠금 파일
+└── README.md # 프로젝트 설명 문서
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 주요 페이지 설명
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 페이지          | 설명                                                  |
+| --------------- | ----------------------------------------------------- |
+| `LoginIntro.js` | 첫 화면 – "오늘 하루가 궁금해요" 메시지와 로그인 버튼 |
+| `Login.js`      | 로그인 입력창, 비밀번호 확인 포함                     |
+| `Signup.js`     | 이름, 이메일, 비밀번호 입력 + 이용약관 동의 포함      |
+| `Record.js`     | (예정) 일기 작성/기록 기능 페이지                     |
