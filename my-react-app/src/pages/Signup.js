@@ -6,16 +6,11 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [username, setUsername] = useState("");
-    const [agree, setAgree] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             alert("비밀번호가 일치하지 않습니다.");
-            return;
-        }
-        if (!agree) {
-            alert("이용약관에 동의해주세요.");
             return;
         }
         console.log("회원가입 성공", { email, username, password });
@@ -69,15 +64,6 @@ const Signup = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
                     />
-
-                    <label className="signup-agree">
-                        <input
-                            type="checkbox"
-                            checked={agree}
-                            onChange={(e) => setAgree(e.target.checked)}
-                        />
-                        이용약관에 동의합니다.
-                    </label>
 
                     <button type="submit" className="signup-button">가입하기</button>
                 </form>

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
+import ChevronLeft from "../assets/images/chevron-left0.svg";
+
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -12,9 +14,13 @@ const Login = () => {
 
     return (
         <div className="login-2">
-            <div className="div">
-                <div className="chevron-left">◀</div>
-                <div className="home">🏠</div>
+            <div className="nav-back">
+                <img
+                    src={ChevronLeft}
+                    alt="뒤로가기"
+                    className="chevron-left"
+                    onClick={() => window.history.back()} // 또는 useNavigate(-1)
+                />
             </div>
             <div className="frame-12">
                 <div className="div2">로그인</div>
@@ -58,26 +64,7 @@ const Login = () => {
                     </button>
                 </form>
 
-                <div className="frame-9">
-                    <div className="horizontal-divider">
-                        <div className="line"></div>
-                    </div>
-                    <div className="or">또는</div>
-                    <div className="horizontal-divider">
-                        <div className="line"></div>
-                    </div>
-                </div>
-
-                <div className="frame-10">
-                    <button className="button2">
-                        <span className="icon2">🔵</span>
-                        <span className="label3">Facebook으로 로그인</span>
-                    </button>
-                    <button className="button2">
-                        <span className="icon3">🟢</span>
-                        <span className="label3">Google로 로그인</span>
-                    </button>
-                </div>
+                
             </div>
         </div>
     );

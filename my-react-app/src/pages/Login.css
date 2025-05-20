@@ -8,7 +8,7 @@
 /* 전체 로그인 페이지 배경 및 정렬 */
 .login-2 {
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ffe4b3, #ffd580); /* 배경 색상 */
+    background-image: url("../assets/images/login-2.png");
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -18,25 +18,25 @@
 }
 
 /* 상단 아이콘 영역 (뒤로가기 등) */
-.div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.nav-back {
     width: 100%;
     max-width: 360px;
-    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 8px;
 }
 
-.chevron-left,
-.home {
-    width: 36px;
-    height: 36px;
+.chevron-left {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
 }
+
 
 /* 로그인 박스 스타일 */
 .frame-12 {
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 24px;
     padding: 40px 24px;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
@@ -119,19 +119,7 @@
     color: #728197;
 }
 
-/* 소셜 로그인 버튼 */
-.button2 {
-    background: #eceff4;
-    border-radius: 16px;
-    padding: 14px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    color: #1a212b;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-}
+
 
 .button2 + .button2 {
     margin-top: 8px;

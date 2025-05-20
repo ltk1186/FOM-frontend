@@ -1,14 +1,15 @@
 /* 전체 페이지 배경 및 중앙 정렬 */
 .signup-page {
-  background: linear-gradient(to bottom, #ffe4b3, #ffd580); /* 오렌지 계열 배경 */
+  background-image: url("../assets/images/login-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
+
 
 /* 카드 레이아웃 */
 .signup-card {
@@ -59,15 +60,6 @@
   box-shadow: 0 0 0 2px rgba(243, 169, 60, 0.2);
 }
 
-/* 이용약관 체크박스 */
-.signup-agree {
-  font-size: 14px;
-  color: #1a212b;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-}
 
 /* 가입 버튼 */
 .signup-button {
