@@ -8,11 +8,18 @@ const LoginIntro = () => {
 
     return (
         <div className="login-intro">
-            <img src={character} alt="캐릭터" className="intro-image" />
+            <img
+                src={character}
+                alt="마스코트"
+                className="bouncy-character"
+            />
+
             <h1 className="intro-title">오늘 하루가 궁금해요</h1>
+
             <button className="intro-button" onClick={() => navigate("/login")}>
                 로그인
             </button>
+
             <p className="signup-text">
                 계정이 없으신가요?{" "}
                 <span className="signup-link" onClick={() => navigate("/signup")}>

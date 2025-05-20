@@ -17,9 +17,9 @@ function App() {
       <header className="header">
         <nav className="header-nav">
           <Link to="/" className="nav-item">홈</Link>
-          <Link to="/login" className="nav-item">로그인</Link>
-          <Link to="/counter" className="nav-item">카운터</Link>
           <Link to="/record" className="nav-item">일기</Link>
+          <Link to="/counter" className="nav-item">캐릭터</Link>
+          <Link to="/login" className="nav-item">로그인</Link>
           <Link to="/signup" className="nav-item">회원가입</Link>
         </nav>
       </header>

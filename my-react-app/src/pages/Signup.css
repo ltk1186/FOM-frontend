@@ -1,4 +1,4 @@
-/* 전체 페이지 배경 및 중앙 정렬 */
+/* 🌄 전체 배경 및 레이아웃 */
 .signup-page {
   background-image: url("../assets/images/login-2.png");
   background-size: cover;
@@ -6,14 +6,30 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* 뒤로가기 + 카드 수직 정렬 */
   justify-content: center;
   align-items: center;
+  padding: 24px;
 }
 
+/* 🔙 카드 바깥 뒤로가기 버튼 */
+.signup-back {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: flex-start;
+}
 
-/* 카드 레이아웃 */
+.chevron-left {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* 🧾 카드 레이아웃 */
 .signup-card {
-  background: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰색 */
   padding: 32px;
   border-radius: 24px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -24,7 +40,7 @@
   gap: 16px;
 }
 
-/* 제목 텍스트 */
+/* 📝 타이틀 */
 .signup-title {
   color: #653d00;
   text-align: center;
@@ -33,7 +49,7 @@
   margin-bottom: 16px;
 }
 
-/* 라벨 */
+/* 🏷️ 라벨 */
 .signup-label {
   font-size: 14px;
   color: #728197;
@@ -42,7 +58,7 @@
   display: block;
 }
 
-/* 입력창 */
+/* 🔤 입력 필드 */
 .signup-input {
   width: 100%;
   padding: 12px 16px;
@@ -60,8 +76,7 @@
   box-shadow: 0 0 0 2px rgba(243, 169, 60, 0.2);
 }
 
-
-/* 가입 버튼 */
+/* 🔘 가입 버튼 */
 .signup-button {
   width: 100%;
   padding: 14px;

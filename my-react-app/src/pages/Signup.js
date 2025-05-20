@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import "./Signup.css"; // Login.css 대신 Signup 전용 스타일 사용
+import "./Signup.css";
+import ChevronLeft from "../assets/images/chevron-left0.svg";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -18,8 +22,20 @@ const Signup = () => {
 
     return (
         <div className="signup-page">
+
+            {/* 🔙 카드 바깥에 위치한 뒤로가기 버튼 */}
+            <div className="signup-back">
+                <img
+                    src={ChevronLeft}
+                    alt="뒤로가기"
+                    className="chevron-left"
+                    onClick={() => navigate(-1)}
+                />
+            </div>
+
             <div className="signup-card">
                 <h2 className="signup-title">계정 만들기</h2>
+
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="username" className="signup-label">이름</label>
                     <input
