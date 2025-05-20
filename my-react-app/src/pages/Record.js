@@ -3,7 +3,12 @@ import "./Record.css";
 
 const Record = () => {
     const [message, setMessage] = useState("");
-    const [chatList, setChatList] = useState([]);
+    const [chatList, setChatList] = useState(() => {
+        // 로컬스토리지에서 초기값 불러오기
+        const saved = localStorage.getItem("diary");
+        return saved ? JSON.parse(saved) : [];
+    });
+
     const [listening, setListening] = useState(false); // 음성인식 상태
     const chatContainerRef = useRef(null);
 
@@ -11,6 +16,7 @@ const Record = () => {
         window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = useRef(null);
 
+    // 음성인식 초기 설정
     useEffect(() => {
         if (!SpeechRecognition) {
             alert("죄송합니다. 이 브라우저는 음성 인식을 지원하지 않습니다.");
@@ -28,31 +34,36 @@ const Record = () => {
         };
 
         recognition.current.onend = () => {
-            setListening(false); // 음성인식 끝나면 상태를 다시 false로 설정
+            setListening(false);
         };
 
         recognition.current.onerror = (event) => {
             console.error("Speech recognition error:", event.error);
-            setListening(false); // 오류발생시 상태 false
+            setListening(false);
         };
     }, [SpeechRecognition]);
 
+    // 일기 저장
     const handleSendMessage = () => {
         if (message.trim() === "") return;
-        setChatList((prev) => [...prev, message]);
+        const updated = [...chatList, message];
+        setChatList(updated);
+        localStorage.setItem("diary", JSON.stringify(updated)); // 로컬 저장
         setMessage("");
     };
 
+    // 음성 입력 시작
     const handleSpeechInput = () => {
         if (listening || !recognition.current) {
             console.log("이미 음성인식 중이거나, 지원되지 않습니다.");
-            return; // 이미 인식 중이라면 재시작 x
+            return;
         }
 
         recognition.current.start();
         setListening(true);
     };
 
+    // 채팅창 자동 스크롤
     useEffect(() => {
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop =
