@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import "./Login.css"; // 동일한 CSS 파일을 활용합니다.
+import "./Signup.css"; // Login.css 대신 Signup 전용 스타일 사용
 
 const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [username, setUsername] = useState("");
+    const [agree, setAgree] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,98 +14,72 @@ const Signup = () => {
             alert("비밀번호가 일치하지 않습니다.");
             return;
         }
-        console.log(
-            "Email:",
-            email,
-            "Username:",
-            username,
-            "Password:",
-            password
-        );
+        if (!agree) {
+            alert("이용약관에 동의해주세요.");
+            return;
+        }
+        console.log("회원가입 성공", { email, username, password });
     };
 
     return (
-        <div className="login-2">
-            <div className="div">
-                <div className="chevron-left">◀</div>
-                <div className="home">🏠</div>
-            </div>
-            <div className="frame-12">
-                <div className="div2">회원가입</div>
-                <form className="frame-7" onSubmit={handleSubmit}>
-                    <div className="text-field">
-                        <label htmlFor="username" className="label">
-                            활동명
-                        </label>
-                        <div className="input">
-                            <input
-                                type="text"
-                                id="username"
-                                className="value"
-                                placeholder="사용자 이름 입력"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                            />
-                        </div>
-                    </div>
+        <div className="signup-page">
+            <div className="signup-card">
+                <h2 className="signup-title">계정 만들기</h2>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="username" className="signup-label">이름</label>
+                    <input
+                        type="text"
+                        id="username"
+                        className="signup-input"
+                        placeholder="이름 입력"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    />
 
-                    <div className="text-field">
-                        <label htmlFor="email" className="label">
-                            이메일
-                        </label>
-                        <div className="input">
-                            <input
-                                type="email"
-                                id="email"
-                                className="value"
-                                placeholder="이메일 입력"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                        </div>
-                    </div>
+                    <label htmlFor="email" className="signup-label">이메일</label>
+                    <input
+                        type="email"
+                        id="email"
+                        className="signup-input"
+                        placeholder="이메일 입력"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
 
-                    <div className="password-field">
-                        <label htmlFor="password" className="label">
-                            비밀번호
-                        </label>
-                        <div className="input">
-                            <input
-                                type="password"
-                                id="password"
-                                className="value"
-                                placeholder="비밀번호 입력"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                required
-                            />
-                        </div>
-                    </div>
+                    <label htmlFor="password" className="signup-label">비밀번호</label>
+                    <input
+                        type="password"
+                        id="password"
+                        className="signup-input"
+                        placeholder="비밀번호 입력"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
 
-                    <div className="password-field">
-                        <label htmlFor="confirmPassword" className="label">
-                            비밀번호 확인
-                        </label>
-                        <div className="input">
-                            <input
-                                type="password"
-                                id="confirmPassword"
-                                className="value"
-                                placeholder="비밀번호 확인"
-                                value={confirmPassword}
-                                onChange={(e) =>
-                                    setConfirmPassword(e.target.value)
-                                }
-                                required
-                            />
-                        </div>
-                    </div>
+                    <label htmlFor="confirmPassword" className="signup-label">비밀번호 확인</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        className="signup-input"
+                        placeholder="비밀번호 확인"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
+                    />
 
-                    <button type="submit" className="button">
-                        <span className="label2">회원가입</span>
-                    </button>
+                    <label className="signup-agree">
+                        <input
+                            type="checkbox"
+                            checked={agree}
+                            onChange={(e) => setAgree(e.target.checked)}
+                        />
+                        이용약관에 동의합니다.
+                    </label>
+
+                    <button type="submit" className="signup-button">가입하기</button>
                 </form>
             </div>
         </div>
