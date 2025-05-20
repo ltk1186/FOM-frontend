@@ -1,0 +1,268 @@
+.login-2,
+.login-2 * {
+    box-sizing: border-box;
+}
+.login-2 {
+    padding: 90px 25px 60px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 812px;
+    position: relative;
+    overflow: hidden;
+}
+.div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 325px;
+    height: 40px;
+    position: relative;
+}
+.chevron-left {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    overflow: visible;
+}
+.home {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    overflow: visible;
+}
+.frame-12 {
+    background: var(--background-primary, #ffffff);
+    border-radius: 32px;
+    border-style: solid;
+    border-color: var(--outline-container, rgba(154, 168, 188, 0.2));
+    border-width: 1px;
+    opacity: 0.7;
+    padding: 40px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 347px;
+    position: relative;
+    box-shadow: var(
+        --elevation-large-box-shadow,
+        0px 16px 32px 0px rgba(0, 0, 0, 0.16)
+    );
+}
+.div2 {
+    color: #653d00;
+    text-align: center;
+    font-family: "Pretendard-Medium", sans-serif;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 500;
+    position: relative;
+    align-self: stretch;
+}
+.frame-7 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.text-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.frame-5 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.label {
+    color: var(--text-secondary, #728197);
+    text-align: left;
+    font-family: "Pretendard-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    position: relative;
+    flex: 1;
+}
+.input {
+    background: var(--background-primary, #ffffff);
+    border-radius: 16px;
+    border-style: solid;
+    border-color: var(--outline-input-enabled, #9aa8bc);
+    border-width: 1px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.value {
+    color: var(--text-primary, #1a212b);
+    text-align: left;
+    font-family: var(--body-large-font-family, "Lexend-Regular", sans-serif);
+    font-size: var(--body-large-font-size, 16px);
+    line-height: var(--body-large-line-height, 24px);
+    font-weight: var(--body-large-font-weight, 400);
+    position: relative;
+    flex: 1;
+}
+.password-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.icon {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.eye-open {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+.button {
+    background: #f3a93c;
+    border-radius: 16px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.label2 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Pretendard-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frame-9 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.horizontal-divider {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+.line {
+    background: var(--outline-decorative, #cbd4e1);
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 1px;
+    position: relative;
+}
+.or {
+    color: var(--text-secondary, #728197);
+    text-align: left;
+    font-family: var(--body-medium-font-family, "Lexend-Regular", sans-serif);
+    font-size: var(--body-medium-font-size, 14px);
+    line-height: var(--body-medium-line-height, 20px);
+    font-weight: var(--body-medium-font-weight, 400);
+    position: relative;
+}
+.frame-10 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.button2 {
+    background: var(--interactive-secondary-solid-enabled-background, #eceff4);
+    border-radius: 16px;
+    padding: 16px 24px 16px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.icon2 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+.label3 {
+    color: var(--interactive-secondary-solid-enabled-foreground, #1a212b);
+    text-align: left;
+    font-family: "Pretendard-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    position: relative;
+}
+.icon3 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
