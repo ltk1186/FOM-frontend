@@ -29,25 +29,74 @@ a {
   text-decoration: none;
 }
 
-/* 📌 네비게이션 바 스타일 */
-.nav-bar {
+/* 🌟 상단 네비게이션 바 */
+.app-nav {
+  width: 100%;
+  padding: 16px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 16px;
-  background: transparent;
-  font-size: 16px;
+  position: absolute; /* 필요시 fixed로 변경 가능 */
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-/* 🔗 개별 링크 */
-.nav-bar a {
+/* 🌈 네비게이션 내부 리스트 */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 24px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 32px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔗 네비게이션 링크 스타일 */
+.nav-list a {
+  text-decoration: none;
   color: #653d00;
   font-weight: 500;
+  font-size: 15px;
   transition: color 0.2s ease;
 }
 
-.nav-bar a:hover {
+.nav-list a:hover {
   color: #f3a93c;
-  text-decoration: underline;
+}
+
+/* 🧭 헤더 스타일 */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  font-size: 15px;
+  font-weight: 500;
+  color: #653d00;
+  padding: 8px 16px;
+  border-radius: 24px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #f3a93c;
+  color: white;
 }
