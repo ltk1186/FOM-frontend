@@ -1,0 +1,125 @@
+/* 전체 페이지 스타일 */
+.record-edit {
+  background-image: url("../assets/images/login-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 상단 뒤로가기 */
+.record-edit-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.back-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* 일지 카드 */
+.record-edit-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 날짜 표시 */
+.edit-date {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+
+/* 제목 */
+.edit-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #653d00;
+}
+
+/* 내용 입력 */
+.record-edit-card textarea {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  padding: 14px;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+.record-edit-card textarea:focus {
+  border-color: #f3a93c;
+  box-shadow: 0 0 0 2px rgba(243, 169, 60, 0.2);
+}
+
+/* 저장/삭제 버튼 그룹 */
+.edit-button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* 저장 버튼 */
+.save-btn {
+  flex: 1;
+  background-color: #f3a93c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #e1942e;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  flex: 1;
+  background-color: #e87c6f;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #d35f57;
+}
+
+.edit-title-input {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}

@@ -8,7 +8,7 @@ my-react-app/
 │
 ├── src/ # 애플리케이션 소스 폴더
 │ ├── assets/ # 이미지 및 리소스
-│ │ └── images/ # 앱에서 사용되는 캐릭터, 배경, 아이콘 이미지
+│ │ └── images/ # 앱에서 사용되는 캐릭터, 배경, 아이콘 이미지 추가 됨
 │ │ ├── image-50.png
 │ │ ├── login-2.png
 │ │ └── chevron-left0.svg

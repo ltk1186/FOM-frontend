@@ -1,0 +1,123 @@
+/* 🌄 전체 배경 설정 */
+.diary-page {
+  background-image: url("../assets/images/login-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Pretendard", sans-serif;
+  position: relative;
+}
+
+/* 🔝 상단 네비게이션 바 */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* 📝 일기 카드 리스트 */
+.diary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.diary-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.diary-card:hover {
+  transform: scale(1.01);
+}
+
+.diary-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.diary-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #422600;
+}
+
+.diary-content {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ➕ 일기 만들기 버튼 */
+.add-diary-btn {
+  background-color: #f28b82;
+  color: white;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 60px;
+}
+
+/* 🔽 아래 화살표 아이콘 */
+.write-toggle-icon {
+  position: absolute;
+  bottom: 90px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* 🟡 하단 FAB 영역 */
+.bottom-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.bottom-icons img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* 버튼 크기 동일 */
+.fab-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f3a93c;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s;
+  object-fit: contain;
+}
+
+.fab-button:hover {
+  transform: scale(1.1);
+}
