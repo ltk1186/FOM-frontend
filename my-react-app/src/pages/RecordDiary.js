@@ -50,10 +50,10 @@ const RecordDiary = () => {
         )}
       </div>
 
-      {/* 🧠 일기 생성 버튼 (AI 일기 생성용) */}
+      {/* 일기 만들기 버튼 */}
       <button
         className="add-diary-btn"
-        onClick={() => alert("AI 일기 자동 생성 기능 예정입니다.")}
+        onClick={() => navigate("/record-summary")}
       >
         일기 만들기
       </button>
@@ -81,7 +81,7 @@ const RecordDiary = () => {
           src={CalendarIcon}
           alt="달력"
           className="fab-button"
-          onClick={() => alert("달력 기능 예정")}
+          onClick={() => navigate("/calendar")}
         />
       </div>
     </div>
